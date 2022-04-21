@@ -65,6 +65,7 @@ jobs:
       -
         name: Update repo description
         uses: peter-evans/dockerhub-description@v2
+        if: github.repository == 'rndmh3ro/docker-ansible'
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
